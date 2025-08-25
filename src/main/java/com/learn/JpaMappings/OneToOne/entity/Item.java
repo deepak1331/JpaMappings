@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Item {
 
@@ -17,4 +18,11 @@ public class Item {
     @Column(name = "item_name", nullable = false)
     private String name;
 
+/*
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "item")
+    //@JoinColumn(name = "fk_customer")
+    private Customer customer;
+*/
+
 }
+
